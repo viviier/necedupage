@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/5.0.0/normalize.css">
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+
+<!--交互用 divboxs-->
+<!-- 遮罩 -->
+<div class="shade" id="shade"></div>
+<!-- login登录界面 -->
+<div class="login-panel" id="loginPanel">
+    <div class="login-top">
+        <span id="loginClose" class="login-close">X</span>
+    </div>
+    <div class="login-content">
+        <div class="form-panel">
+            <input type="text" placeholder="账号" id="loginUser" value="studyOnline">
+            <input type="password" placeholder="密码" id="loginPassword" value="study.163.com">
+            <input type="button" id="loginButton" value="登录" class="login-button">
+        </div>
+    </div>
+</div>
+<!-- 视频窗口 -->
+<div class="video-panel" id="videoPanel">
+    <div class="video-top">
+        <span id="videoClose" class="video-close">X</span>
+    </div>
+    <div class="video-content">
+        <video id='videoContent' src="http://mov.bn.netease.com/open-movie/nos/mp4/2014/12/30/SADQ86F5S_shd.mp4" controls></video>
+    </div>
+</div>
+<div class="container">
+    <!-- 头部-->
+    <header>
+        <!-- 提示 -->
+        <div class="h-tips" id="tips">
+            <div class="tips-container">
+                <div class="tips-text">
+                    网易云课堂微专业，帮助你掌握专业技能，令你求职或加薪多一份独特优势！ <a href=""> 立即查看&gt;</a>
+                </div>
+                <div class="tips-button" id="tipsButton">
+                    <a href="">X 不再提醒</a>
+                </div>
+            </div>
+        </div>
+        <!-- 顶部导航 -->
+        <nav class="h-navbar">
+            <!-- 顶部导航左边布局 -->
+            <div class="navbar-brand">
+                <!-- logo -->
+                <div class="logo"></div>
+                <!-- 关注按钮 -->
+                <div class="follow">
+                    <span class="follow-btn" id="followBtn"></span>
+                    <span class="followed-btn" id="followedBtn">已关注 <a href="#">| 取消</a></span>
+                    <span class="follow-fans">粉丝 45</span>
+                </div>
+            </div>
+            <!-- 顶部导航右边布局 -->
+            <div class="navbar-share">
+                <!-- 链接 -->
+                <ul class="links">
+                    <li><a href="http://open.163.com/">网易公开课</a></li>
+                    <li><a href="http://study.163.com/">云课堂</a></li>
+                    <li><a href="http://www.icourse163.org/">中国大学MOOC</a></li>
+                </ul>
+                <!-- 搜索框 -->
+                <span class="search"></span>
+            </div>
+        </nav>
+        <!-- 轮播图 -->
+        <div class="h-coursel" id="coursel">
+            <div class="coursel-content" id="courselContent">
+                <div class="item">
+                    <a href="http://open.163.com/" target="_blank"><img src="./images/banner1.jpg" alt="" ></a>
+                </div>
+                <div class="item">
+                    <a  href="http://study.163.com/" target="_blank"><img src="./images/banner2.jpg" alt=""></a>
+                </div>
+                <div class="item">
+                    <a href="http://www.icourse163.org/" target="_blank"><img src="./images/banner3.jpg" alt="" ></a>
+                </div>
+            </div>
+            <div class="current" id="current">
+                <span class="on"></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- 中间内容-->
+    <div class="main">
+        <!--介绍-->
+        <div class="m-about">
+            <!-- 介绍的item总布局 -->
+            <div class="about-intro">
+                <div class="items">
+                    <div class="items-image open-class"></div>
+                    <div class="items-text">
+                        <h4>网易公开课</h4>
+                        <p>推出国内外名校公开课，涉及广泛的学科，名校老师认真讲解深度剖析，网易视频公开课频道搭建起强有力的网络视频教学平台。</p>
+                        <a href="#">了解更多 &gt;</a>
+                    </div>
+                </div>
+
+                <div class="items">
+                    <div class="items-image cloud-classroom"></div>
+                    <div class="items-text">
+                        <h4>云课堂</h4>
+                        <p>网易旗下大型在线学习平台，该平台面向学习者提供海量免费、优质课程,创新的个性化学习体验，自由开放的交流互动环境。</p>
+                        <a href="#">了解更多 &gt;</a>
+                    </div>
+                </div>
+
+                <div class="items">
+                    <div class="items-image university-mooc"></div>
+                    <div class="items-text">
+                        <h4>中国大学MOOC</h4>
+                        <p>是爱课程网携手云课堂打造的在线学习平台，每一个有提升愿望的人,都可以在这里学习中国最好的大学课程，学完还能获得认证证书。</p>
+                        <a href="#">了解更多 &gt;</a>
+                    </div>
+                </div>
+            </div>
+            <div class="about-images">
+                <img src="./images/aboutImg.jpg" alt="">
+            </div>
+        </div>
+
+        <!-- 主要内容区 -->
+        <div class="m-container">
+            <div class="m-content">
+                <!-- 主要内容区左边布局 -->
+                <div class="content-synopsis">
+                    <!-- 选项卡标签 -->
+                    <div class="synopsis-tabs">
+                        <button class="tab pitch" id="productDesign" disabled>产品设计</button>
+                        <button class="tab" id="programmingLanguage">编程语言</button>
+                    </div>
+
+                    <!-- 选项卡内容 -->
+                    <div class="synopsis-cards" id="synopsisCards">
+                        <!--选项卡-->
+                        <div class="productDesign-card" id="productDesignCard">
+                        </div>
+                    </div>
+
+                    <!--分页器-->
+                    <ul class="paging" id="paging"><li><a href="#" id="pagPrev">&lt;</a></li><li><a href="#" id="pagNext">&gt;</a></li></ul>
+                </div>
+
+                <!-- 主要内容右边布局 -->
+                <div class="content-institutions">
+                    <!-- institutions-about -->
+                    <!-- 机构介绍 -->
+                    <div class="institutions-about">
+                        <!-- 标题 -->
+                        <div class="about-title">
+                            <h4>机构介绍</h4>
+                        </div>
+                        <!-- 内容 -->
+                        <div class="about-video">
+                            <p>观看下面的视频来了解吧：</p>
+                            <div class="video-box" id="videoBox">
+                                <img src="./images/calss-info.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- hot排行 -->
+                    <div class="institutions-hot">
+                        <!-- hot标题 -->
+                        <div class="hot-title">
+                            <h4>最热排行</h4>
+                        </div>
+
+                        <!-- hot内容 -->
+                        <div class="hot-cards" id="hotCards">
+                            <!-- hotcard -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 底部 -->
+    <footer>
+        <div class="f-about">
+            <!-- logo -->
+            <div class="logo"></div>
+            <!-- 版权等信息 -->
+            <div class="info">
+                <p>&copy;2014 icourse163.org 浙ICP备08114786号-1</p>
+                <p>icourse.cn 京ICP备12020869号-2 京公网安备110102000459-2</p>
+            </div>
+        </div>
+
+        <!--链接-->
+        <div class="f-cite">
+            <!--链接item-->
+            <div class="cite-item">
+                <h4>
+                    友情链接
+                </h4>
+                <a href="#">网易公开课</a>
+                <a href="#">网易云课堂</a>
+                <a href="#">中国大学MOOC</a>
+            </div>
+            <div class="cite-item">
+                <h4>
+                    我们：
+                </h4>
+                <a href="#">关于</a>
+                <a href="#">联系</a>
+                <a href="#">关注 <i></i></a>
+            </div>
+            <div class="cite-item">
+                <h4>
+                    更多：
+                </h4>
+                <a href="#">常见问题</a>
+                <a href="#">意见反馈</a>
+            </div>
+        </div>
+    </footer>
+</div>
+<script src="./md5.js"></script>
+<script src="./main.js"></script>
+</body>
+</html>

@@ -1,0 +1,733 @@
+/* sass initial plugins */
+
+// 字体大小
+$fontSize22: 2.2rem;
+$fontSize20: 2rem;
+$fontSize16: 1.6rem;
+$fontSize14: 1.4rem;
+$fontSize12: 1.2rem;
+
+// 字体颜色
+$black: rgba(0, 0, 0, 1);
+$white: rgba(255, 255, 255, 1);
+$gray: rgba(102, 102, 102, 1);
+$green: rgba(0, 162, 45, 1);
+
+// 自适应的宽度大小
+$maxWidth: 90%;
+
+/* 精灵图 */
+.spring {
+  background-image: url('./images/spring.png');
+  background-repeat: no-repeat;
+}
+
+/* clearfix */
+@mixin clearfix {
+  &:after,
+  &:before {
+    content: '';
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+/* sass initial plugins end */
+
+html, body {
+  min-width: 1100px;
+  height: 100%;
+  font-size: 62.5%;
+  font-family: "MicrosoftYaHei";
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+// header start
+header {
+  width: 100%;
+
+  /* navbar 顶部导航样式 */
+  .h-navbar {
+    max-width: $maxWidth;
+    padding: 4rem 0;
+    margin: 0 auto;
+    @include clearfix;
+
+    /* 左边样式 */
+    .navbar-brand {
+      float: left;
+      /* logo */
+      .logo {
+        display: inline-block;
+        width: 234px;
+        height: 22px;
+        @extend .spring;
+        background-position: 0 0;
+        margin-right: 1.5rem;
+      }
+      /* 关注样式 */
+      .follow {
+        display: inline-block;
+        .follow-btn {
+          display: inline-block;
+          @extend .spring;
+          background-position: 0 -28px;
+          width: 55px;
+          height: 22px;
+          cursor: pointer;
+          margin: 0 1.5rem;
+        }
+        .followed-btn {
+          display: none;
+          background-position: -117px -28px;
+          vertical-align: top;
+          @extend .follow-btn;
+          width: 120px;
+          line-height: 2;
+          cursor: pointer;
+          text-align: center;
+           a {
+             color: rgba(153, 153, 153, 1);
+             text-decoration: none;
+           }
+        }
+        .follow-fans {
+          display: inline-block;
+          vertical-align: super;
+          line-height: 2;
+        }
+      }
+    }
+
+    /* 右边样式 */
+    .navbar-share {
+      float: right;
+      @include clearfix;
+      /* 链接样式 */
+      .links {
+        float: left;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        li {
+          padding: 0 3rem;
+          display: inline-block;
+          &:nth-of-type(1) {
+            padding-left: 0;
+          }
+          a {
+            font-size: $fontSize16;
+            display: inline-block;
+            text-decoration: none;
+            color: $black;
+            &:hover {
+              color: $green;
+            }
+          }
+        }
+      }
+      /* 搜索样式 */
+      .search {
+        float: left;
+        width: 20px;
+        height: 20px;
+        @extend .spring;
+        background-position: 0 -53px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+// header end
+
+// main start
+
+.main {
+  width: 100%;
+
+  /* m-about 介绍类布局 */
+  .m-about {
+    width: 100%;
+    /* 总item布局 */
+    .about-intro {
+      max-width: $maxWidth;
+      margin: 0 auto;
+      padding: 6rem 0;
+      @include clearfix;
+      /* items */
+      .items {
+        width: calc(33.33%);
+        float: left;
+        @include clearfix;
+
+        /* items image */
+        .items-image {
+          float: left;
+          @extend .spring;
+          width: 80px;
+          height: 80px;
+          margin-right: 2rem;
+
+          /* image spring */
+          &.open-class {
+            background-position: 1px -77px;
+          }
+          &.cloud-classroom {
+            background-position: -90px -77px;
+          }
+          &.university-mooc {
+            background-position: -184px -77px;
+          }
+        }
+
+        /* items text */
+        .items-text {
+          width: calc(60%);
+          float: left;
+          h4 {
+            margin: 0;
+            color: $black;
+            font-size: $fontSize22;
+            font-weight: normal;
+          }
+          p {
+            font-size: $fontSize14;
+            color: $gray;
+          }
+          a {
+            color: $green;
+            text-decoration: none;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+
+    /* about images */
+    .about-images {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  /* 主要内容区域 */
+  .m-container {
+    width: 100%;
+    background-color: rgba(248, 248, 248, 1);
+
+    .m-content {
+      padding: 8rem 0;
+      max-width: $maxWidth;
+      margin: 0 auto;
+      @include clearfix;
+
+      /* 左边布局 content-synopsis */
+      .content-synopsis {
+        width:80%;
+        float: left;
+
+        /* 分页器 */
+        .paging {
+          margin: 2rem 0;
+          padding: 0;
+          width: calc(100% - 4rem);
+          text-align: right;
+          li {
+            list-style-type: none;
+            display: inline-block;
+            margin-left: 1rem;
+            a {
+              font-size: $fontSize14;
+              text-decoration: none;
+              border: none;
+              display: inline-block;
+              padding: .5rem 1rem;
+              cursor: pointer;
+              color: $white;
+              background-color: rgba(139, 217, 177, 1);
+            }
+            button {
+              @extend a;
+              color: $black;
+              &.orbit {
+                background-color: rgba(139, 217, 177, 1);
+                color: $white;
+              }
+              background-color: transparent;
+               &.cut {
+                 color: $green;
+                 background-color: transparent;
+               }
+              &:focus {
+                  outline: none;
+              }
+            }
+          }
+        }
+
+        /* 选项卡 */
+        .synopsis-tabs {
+          width: 100%;
+          button {
+          &.tab {
+            display: inline-block;
+            padding: 1.5rem 6rem;
+            color: $gray;
+            background-color: $white;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            margin-left: -4px;
+            font-size: $fontSize20;
+              &:focus {
+                outline: none;
+              }
+          }
+            &.pitch {
+              background-color: $green;
+              color: #000;
+            }
+          }
+        }
+
+        /* 选项卡内容 */
+        .synopsis-cards {
+          width: 100%;
+
+          /* 选项卡 */
+          .productDesign-card {
+            display: inline-block;
+            width: 100%;
+
+            /* card */
+            .card {
+              width: calc(24.7% - 2.2rem - 4px);
+              display: inline-block;
+              margin: 2rem 2rem 0 0;
+              border:1px solid rgba(230, 230, 230, 1);
+              background-color: $white;
+              box-shadow: 0 2px 3px #aaa;
+              padding: 1px;
+                &:hover .title p {
+                  color: $green;
+                }
+              &:hover {
+                box-shadow: 0 1px 1px #aaa;
+              }
+               /* cardbox 图片内容 */
+              .img-box {
+                width: 100%;
+                height: 125px;
+                overflow: hidden;
+                 img {
+                   width: 100%;
+                   height: 100%;
+                 }
+              }
+
+              /* carbox 文本内容 */
+              .content-box {
+                padding: 0 .5rem 1rem;
+                 /* box 标题 */
+                .title {
+                  font-size: $fontSize16;
+                  color: $black;
+                    p {
+                      text-overflow: ellipsis;
+                      overflow: hidden;
+                      white-space: nowrap;
+                    }
+                }
+                 /* 作者 */
+                .author {
+                  font-size: $fontSize14;
+                  color: $gray;
+                }
+                 /* 人数 */
+                .population {
+                  display: inline-block;
+                  font-size: $fontSize12;
+                  max-width: 50%;
+                  padding: 0 1rem;
+                  height: 20px;
+                  color: $gray;
+                  border: 1px solid $gray;
+                  border-radius: 3px;
+                  margin: 1rem 0;
+                    span {
+                      display: inline-block;
+                      width: 100%;
+                      height: 100%;
+                      text-align: left;
+                      line-height: 2;
+                    }
+                    i {
+                      display: inline-block;
+                      width: 10px;
+                      height: 10px;
+                      margin-right: .2rem;
+                      @extend .spring;
+                      background-position: -286px 0;
+                    }
+                }
+                  /* 价格 */
+                .price {
+                  font-size: $fontSize14;
+                  color: rgba(255, 63, 0, 1);
+                }
+              }
+            }
+          }
+
+        }
+      }
+
+      /* 右边布局 content-institutions */
+      .content-institutions {
+        width: 20%;
+        float: left;
+
+          /* 机构介绍总版 */
+        .institutions-about {
+          border:1px solid rgba(230, 230, 230, 1);
+          background-color: $white;
+          box-shadow: 0 2px 3px #aaa;
+          margin-bottom: 2rem;
+            /* 标题 */
+            .about-title {
+              padding: 1.5rem 1rem;
+              border-bottom:2px solid rgba(230, 230, 230, 1);
+                h4 {
+                  font-size: $fontSize16;
+                  margin: 0;
+                  font-weight: normal;
+                }
+            }
+
+            /* 内容 */
+            .about-video {
+              padding: 1.5rem 1rem;
+              p {
+                margin-top: 0;
+                font-size:$fontSize14;
+              }
+              .video-box {
+                width: 100%;
+                height: 100%;
+                  img {
+                    width: 100%;
+                    height: 100%;
+                  }
+              }
+            }
+        }
+
+          /* 排行总版 */
+        .institutions-hot {
+          border:1px solid rgba(230, 230, 230, 1);
+          background-color: $white;
+          box-shadow: 0 2px 3px #aaa;
+
+            /* 标题 */
+          .hot-title {
+            padding: 1.5rem 1rem;
+            border-bottom:2px solid rgba(230, 230, 230, 1);
+            h4 {
+              font-size: $fontSize16;
+              margin: 0;
+              font-weight: normal;
+            }
+          }
+
+           /* cards */
+          .hot-cards {
+            padding: 1rem;
+              .card {
+                @include clearfix;
+                width: 100%;
+                margin: .5rem 0;
+                  .card-image {
+                    margin-right: 1rem;
+                    width: 20%;
+                    height: 100%;
+                    float: left;
+                    overflow: hidden;
+                      img {
+                        width: 100%;
+                        height: 100%;
+                      }
+                  }
+
+                  /* card 文本区域 */
+                  .card-content {
+                    float: left;
+                    width: calc(79% - 1rem);
+
+                    /* 标题 */
+                    .title {
+                      width: 100%;
+                      font-size: $fontSize14;
+                      text-overflow: ellipsis;
+                      overflow: hidden;
+                      white-space: nowrap;
+                      color: rgba(51, 51, 51, 1);
+                    }
+
+                    /* 人数 */
+                    .population {
+                      width: 100%;
+                      margin: 1rem 0;
+                      span {
+                        color: $gray;
+                        font-size: $fontSize12;
+                        i {
+                          display: inline-block;
+                          width: 10px;
+                          height: 10px;
+                          margin-right: .2rem;
+                          @extend .spring;
+                          background-position: -286px 0;
+                        }
+                      }
+                    }
+                  }
+              }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+  /* footer */
+
+footer {
+  padding: 5rem;
+  @include clearfix;
+  background-color: rgba(43, 52, 57, 1);
+
+    /* 左边about栏 */
+  .f-about {
+    float: left;
+      .logo {
+        @extend .spring;
+        width: 235px;
+        height: 20px;
+        background-position: 0 -219px;
+      }
+      .info {
+        margin-top: 2rem;
+        color: rgba(143, 142, 140, 1);
+        font-size: $fontSize12;
+      }
+  }
+
+    /* 右边链接栏 */
+  .f-cite {
+    float: right;
+      .cite-item {
+        display: inline-block;
+        vertical-align: top;
+        width: calc(33.33% - 2rem);
+          h4 {
+            margin-top: 0;
+            font-weight: normal;
+            font-size: $fontSize14;
+            color: rgba(143, 142, 140, 1);
+          }
+          a {
+            display: inline-block;
+            width: 100%;
+            color: rgba(143, 142, 140, 1);
+            font-size: $fontSize16;
+            text-decoration: none;
+            margin-top: 1rem;
+              &:hover {
+                text-decoration: underline;
+              }
+              i {
+                margin-left: .5rem;
+                display: inline-block;
+                @extend .spring;
+                width: 21px;
+                height: 17px;
+                background-position: -88px -53px;
+              }
+          }
+      }
+  }
+}
+
+
+/* 交互相关的 */
+
+// 顶层提示
+.h-tips {
+  width: 100%;
+  background-color: rgba(243, 243, 243, 1);
+  padding: 1rem 0;
+  font-size: $fontSize14;
+    .tips-container {
+      width: $maxWidth;
+      margin: 0 auto;
+      a {
+        color: $green;
+        text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+          }
+      }
+      @include clearfix;
+        .tips-text {
+          float: left;
+        }
+        .tips-button {
+          float: right;
+          a {
+            color: $black;
+          }
+        }
+    }
+}
+
+// 遮罩
+.shade {
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  display: none;
+  background-color: rgba(0,0,0,0.6);
+}
+
+// login
+.login-panel {
+  display: none;
+  width: calc(100%/2 - 5rem);
+  height: calc(100%/2);
+  background-color: $white;
+  position: fixed;
+  z-index: 1000;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+    // 顶部样式
+    .login-top {
+      background-color: #74B96E;;
+      width: 100%;
+      text-align: right;
+    .login-close {
+      font-size: $fontSize16;
+      display: inline-block;
+      padding: .7rem;
+      cursor: pointer;
+      color: $black;
+        &:hover {
+          color: $green;
+        }
+    }
+    }
+
+    // 内容样式
+    .login-content {
+      padding: 2rem 5rem;
+        .form-panel {
+          width: 60%;
+          input {
+            box-sizing: border-box;
+            display: block;
+            width: 100%;
+            margin-top: 2rem;
+            padding:1rem;
+            &:nth-of-type(1) {
+              margin-top: 0;
+            }
+            &.login-button {
+              background-color: #74B96E;
+              border: none;
+              color: $white;
+              user-select: none;
+                &:focus {
+                  outline: none;
+                }
+                &:active {
+                  color: $green;
+                }
+            }
+          }
+        }
+    }
+}
+
+// video
+.video-panel {
+  @extend .login-panel;
+  width: calc(100% - 8rem);
+    .video-top {
+      @extend .login-top;
+        .video-close {
+          @extend  .login-close;
+        }
+    }
+}
+
+// 轮播图
+.h-coursel {
+  z-index: 899;
+  width: 100%;
+  height: 460px;
+  overflow: hidden;
+  position: relative;
+  .coursel-content {
+    position: absolute;
+    left: 0;
+    height: 100%;
+    transition: left .5s;
+    .item {
+      float: left;
+      height: 100%;
+      overflow: hidden;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  .current {
+    width: 200px;
+    height: 40px;
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
+    text-align: center;
+    line-height: 40px;
+      span {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        margin: 0 .3rem;
+        background-color: $white;
+          &.on {
+            background-color: $black;
+          }
+      }
+  }
+}

@@ -1,0 +1,551 @@
+@charset "UTF-8";
+/* sass initial plugins */
+/* 精灵图 */
+.spring, header .h-navbar .navbar-brand .logo, header .h-navbar .navbar-brand .follow .follow-btn, header .h-navbar .navbar-brand .follow .followed-btn, header .h-navbar .navbar-share .search, .main .m-about .about-intro .items .items-image, .main .m-container .m-content .content-synopsis .synopsis-cards .productDesign-card .card .content-box .population i, .main .m-container .m-content .content-institutions .institutions-hot .hot-cards .card .card-content .population span i, footer .f-about .logo, footer .f-cite .cite-item a i, footer .f-cite .cite-item .main .m-container .m-content .content-synopsis .paging li button i, .main .m-container .m-content .content-synopsis .paging li footer .f-cite .cite-item button i {
+  background-image: url("./images/spring.png");
+  background-repeat: no-repeat; }
+
+/* clearfix */
+/* sass initial plugins end */
+html, body {
+  min-width: 1100px;
+  height: 100%;
+  font-size: 62.5%;
+  font-family: "MicrosoftYaHei"; }
+
+.container {
+  background-color: white; }
+
+header {
+  width: 100%;
+  /* navbar 顶部导航样式 */ }
+  header .h-navbar {
+    max-width: 90%;
+    padding: 4rem 0;
+    margin: 0 auto;
+    /* 左边样式 */
+    /* 右边样式 */ }
+    header .h-navbar:after, header .h-navbar:before {
+      content: '';
+      display: table; }
+    header .h-navbar:after {
+      clear: both; }
+    header .h-navbar .navbar-brand {
+      float: left;
+      /* logo */
+      /* 关注样式 */ }
+      header .h-navbar .navbar-brand .logo {
+        display: inline-block;
+        width: 234px;
+        height: 22px;
+        background-position: 0 0;
+        margin-right: 1.5rem; }
+      header .h-navbar .navbar-brand .follow {
+        display: inline-block; }
+        header .h-navbar .navbar-brand .follow .follow-btn, header .h-navbar .navbar-brand .follow .followed-btn {
+          display: inline-block;
+          background-position: 0 -28px;
+          width: 55px;
+          height: 22px;
+          cursor: pointer;
+          margin: 0 1.5rem; }
+        header .h-navbar .navbar-brand .follow .followed-btn {
+          display: none;
+          background-position: -117px -28px;
+          vertical-align: top;
+          width: 120px;
+          line-height: 2;
+          cursor: pointer;
+          text-align: center; }
+          header .h-navbar .navbar-brand .follow .followed-btn a, header .h-navbar .navbar-brand .follow .followed-btn .main .m-container .m-content .content-synopsis .paging li button, .main .m-container .m-content .content-synopsis .paging li header .h-navbar .navbar-brand .follow .followed-btn button {
+            color: #999999;
+            text-decoration: none; }
+        header .h-navbar .navbar-brand .follow .follow-fans {
+          display: inline-block;
+          vertical-align: super;
+          line-height: 2; }
+    header .h-navbar .navbar-share {
+      float: right;
+      /* 链接样式 */
+      /* 搜索样式 */ }
+      header .h-navbar .navbar-share:after, header .h-navbar .navbar-share:before {
+        content: '';
+        display: table; }
+      header .h-navbar .navbar-share:after {
+        clear: both; }
+      header .h-navbar .navbar-share .links {
+        float: left;
+        margin: 0;
+        padding: 0;
+        text-align: center; }
+        header .h-navbar .navbar-share .links li {
+          padding: 0 3rem;
+          display: inline-block; }
+          header .h-navbar .navbar-share .links li:nth-of-type(1) {
+            padding-left: 0; }
+          header .h-navbar .navbar-share .links li a, header .h-navbar .navbar-share .links .main .m-container .m-content .content-synopsis .paging li button, .main .m-container .m-content .content-synopsis .paging header .h-navbar .navbar-share .links li button {
+            font-size: 1.6rem;
+            display: inline-block;
+            text-decoration: none;
+            color: black; }
+            header .h-navbar .navbar-share .links li a:hover, header .h-navbar .navbar-share .links .main .m-container .m-content .content-synopsis .paging li button:hover, .main .m-container .m-content .content-synopsis .paging header .h-navbar .navbar-share .links li button:hover {
+              color: #00a22d; }
+      header .h-navbar .navbar-share .search {
+        float: left;
+        width: 20px;
+        height: 20px;
+        background-position: 0 -53px;
+        cursor: pointer; }
+
+.main {
+  width: 100%;
+  /* m-about 介绍类布局 */
+  /* 主要内容区域 */ }
+  .main .m-about {
+    width: 100%;
+    /* 总item布局 */
+    /* about images */ }
+    .main .m-about .about-intro {
+      max-width: 90%;
+      margin: 0 auto;
+      padding: 6rem 0;
+      /* items */ }
+      .main .m-about .about-intro:after, .main .m-about .about-intro:before {
+        content: '';
+        display: table; }
+      .main .m-about .about-intro:after {
+        clear: both; }
+      .main .m-about .about-intro .items {
+        width: calc(33.33%);
+        float: left;
+        /* items image */
+        /* items text */ }
+        .main .m-about .about-intro .items:after, .main .m-about .about-intro .items:before {
+          content: '';
+          display: table; }
+        .main .m-about .about-intro .items:after {
+          clear: both; }
+        .main .m-about .about-intro .items .items-image {
+          float: left;
+          width: 80px;
+          height: 80px;
+          margin-right: 2rem;
+          /* image spring */ }
+          .main .m-about .about-intro .items .items-image.open-class {
+            background-position: 1px -77px; }
+          .main .m-about .about-intro .items .items-image.cloud-classroom {
+            background-position: -90px -77px; }
+          .main .m-about .about-intro .items .items-image.university-mooc {
+            background-position: -184px -77px; }
+        .main .m-about .about-intro .items .items-text {
+          width: calc(60%);
+          float: left; }
+          .main .m-about .about-intro .items .items-text h4 {
+            margin: 0;
+            color: black;
+            font-size: 2.2rem;
+            font-weight: normal; }
+          .main .m-about .about-intro .items .items-text p {
+            font-size: 1.4rem;
+            color: #666666; }
+          .main .m-about .about-intro .items .items-text a, .main .m-about .about-intro .items .items-text .m-container .m-content .content-synopsis .paging li button, .main .m-container .m-content .content-synopsis .paging li .m-about .about-intro .items .items-text button {
+            color: #00a22d;
+            text-decoration: none; }
+            .main .m-about .about-intro .items .items-text a:hover, .main .m-about .about-intro .items .items-text .m-container .m-content .content-synopsis .paging li button:hover, .main .m-container .m-content .content-synopsis .paging li .m-about .about-intro .items .items-text button:hover {
+              text-decoration: underline; }
+    .main .m-about .about-images {
+      width: 100%;
+      height: 100%;
+      overflow: hidden; }
+      .main .m-about .about-images img {
+        width: 100%;
+        height: 100%; }
+  .main .m-container {
+    width: 100%;
+    background-color: #f8f8f8; }
+    .main .m-container .m-content {
+      padding: 8rem 0;
+      max-width: 90%;
+      margin: 0 auto;
+      /* 左边布局 content-synopsis */
+      /* 右边布局 content-institutions */ }
+      .main .m-container .m-content:after, .main .m-container .m-content:before {
+        content: '';
+        display: table; }
+      .main .m-container .m-content:after {
+        clear: both; }
+      .main .m-container .m-content .content-synopsis {
+        width: 80%;
+        float: left;
+        /* 分页器 */
+        /* 选项卡 */
+        /* 选项卡内容 */ }
+        .main .m-container .m-content .content-synopsis .paging {
+          margin: 2rem 0;
+          padding: 0;
+          width: calc(100% - 4rem);
+          text-align: right; }
+          .main .m-container .m-content .content-synopsis .paging li {
+            list-style-type: none;
+            display: inline-block;
+            margin-left: 1rem; }
+            .main .m-container .m-content .content-synopsis .paging li a, .main .m-container .m-content .content-synopsis .paging li button {
+              font-size: 1.4rem;
+              text-decoration: none;
+              border: none;
+              display: inline-block;
+              padding: .5rem 1rem;
+              cursor: pointer;
+              color: white;
+              background-color: #8bd9b1; }
+            .main .m-container .m-content .content-synopsis .paging li button {
+              color: black;
+              background-color: transparent; }
+              .main .m-container .m-content .content-synopsis .paging li button.orbit {
+                background-color: #8bd9b1;
+                color: white; }
+              .main .m-container .m-content .content-synopsis .paging li button.cut {
+                color: #00a22d;
+                background-color: transparent; }
+              .main .m-container .m-content .content-synopsis .paging li button:focus {
+                outline: none; }
+        .main .m-container .m-content .content-synopsis .synopsis-tabs {
+          width: 100%; }
+          .main .m-container .m-content .content-synopsis .synopsis-tabs button.tab {
+            display: inline-block;
+            padding: 1.5rem 6rem;
+            color: #666666;
+            background-color: white;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            margin-left: -4px;
+            font-size: 2rem; }
+            .main .m-container .m-content .content-synopsis .synopsis-tabs button.tab:focus {
+              outline: none; }
+          .main .m-container .m-content .content-synopsis .synopsis-tabs button.pitch {
+            background-color: #00a22d;
+            color: #000; }
+        .main .m-container .m-content .content-synopsis .synopsis-cards {
+          width: 100%;
+          /* 选项卡 */ }
+          .main .m-container .m-content .content-synopsis .synopsis-cards .productDesign-card {
+            display: inline-block;
+            width: 100%;
+            /* card */ }
+            .main .m-container .m-content .content-synopsis .synopsis-cards .productDesign-card .card {
+              width: calc(24.7% - 2.2rem - 4px);
+              display: inline-block;
+              margin: 2rem 2rem 0 0;
+              border: 1px solid #e6e6e6;
+              background-color: white;
+              box-shadow: 0 2px 3px #aaa;
+              padding: 1px;
+              /* cardbox 图片内容 */
+              /* carbox 文本内容 */ }
+              .main .m-container .m-content .content-synopsis .synopsis-cards .productDesign-card .card:hover .title p {
+                color: #00a22d; }
+              .main .m-container .m-content .content-synopsis .synopsis-cards .productDesign-card .card:hover {
+                box-shadow: 0 1px 1px #aaa; }
+              .main .m-container .m-content .content-synopsis .synopsis-cards .productDesign-card .card .img-box {
+                width: 100%;
+                height: 125px;
+                overflow: hidden; }
+                .main .m-container .m-content .content-synopsis .synopsis-cards .productDesign-card .card .img-box img {
+                  width: 100%;
+                  height: 100%; }
+              .main .m-container .m-content .content-synopsis .synopsis-cards .productDesign-card .card .content-box {
+                padding: 0 .5rem 1rem;
+                /* box 标题 */
+                /* 作者 */
+                /* 人数 */
+                /* 价格 */ }
+                .main .m-container .m-content .content-synopsis .synopsis-cards .productDesign-card .card .content-box .title {
+                  font-size: 1.6rem;
+                  color: black; }
+                  .main .m-container .m-content .content-synopsis .synopsis-cards .productDesign-card .card .content-box .title p {
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    white-space: nowrap; }
+                .main .m-container .m-content .content-synopsis .synopsis-cards .productDesign-card .card .content-box .author {
+                  font-size: 1.4rem;
+                  color: #666666; }
+                .main .m-container .m-content .content-synopsis .synopsis-cards .productDesign-card .card .content-box .population {
+                  display: inline-block;
+                  font-size: 1.2rem;
+                  max-width: 50%;
+                  padding: 0 1rem;
+                  height: 20px;
+                  color: #666666;
+                  border: 1px solid #666666;
+                  border-radius: 3px;
+                  margin: 1rem 0; }
+                  .main .m-container .m-content .content-synopsis .synopsis-cards .productDesign-card .card .content-box .population span {
+                    display: inline-block;
+                    width: 100%;
+                    height: 100%;
+                    text-align: left;
+                    line-height: 2; }
+                  .main .m-container .m-content .content-synopsis .synopsis-cards .productDesign-card .card .content-box .population i {
+                    display: inline-block;
+                    width: 10px;
+                    height: 10px;
+                    margin-right: .2rem;
+                    background-position: -286px 0; }
+                .main .m-container .m-content .content-synopsis .synopsis-cards .productDesign-card .card .content-box .price {
+                  font-size: 1.4rem;
+                  color: #ff3f00; }
+      .main .m-container .m-content .content-institutions {
+        width: 20%;
+        float: left;
+        /* 机构介绍总版 */
+        /* 排行总版 */ }
+        .main .m-container .m-content .content-institutions .institutions-about {
+          border: 1px solid #e6e6e6;
+          background-color: white;
+          box-shadow: 0 2px 3px #aaa;
+          margin-bottom: 2rem;
+          /* 标题 */
+          /* 内容 */ }
+          .main .m-container .m-content .content-institutions .institutions-about .about-title {
+            padding: 1.5rem 1rem;
+            border-bottom: 2px solid #e6e6e6; }
+            .main .m-container .m-content .content-institutions .institutions-about .about-title h4 {
+              font-size: 1.6rem;
+              margin: 0;
+              font-weight: normal; }
+          .main .m-container .m-content .content-institutions .institutions-about .about-video {
+            padding: 1.5rem 1rem; }
+            .main .m-container .m-content .content-institutions .institutions-about .about-video p {
+              margin-top: 0;
+              font-size: 1.4rem; }
+            .main .m-container .m-content .content-institutions .institutions-about .about-video .video-box {
+              width: 100%;
+              height: 100%; }
+              .main .m-container .m-content .content-institutions .institutions-about .about-video .video-box img {
+                width: 100%;
+                height: 100%; }
+        .main .m-container .m-content .content-institutions .institutions-hot {
+          border: 1px solid #e6e6e6;
+          background-color: white;
+          box-shadow: 0 2px 3px #aaa;
+          /* 标题 */
+          /* cards */ }
+          .main .m-container .m-content .content-institutions .institutions-hot .hot-title {
+            padding: 1.5rem 1rem;
+            border-bottom: 2px solid #e6e6e6; }
+            .main .m-container .m-content .content-institutions .institutions-hot .hot-title h4 {
+              font-size: 1.6rem;
+              margin: 0;
+              font-weight: normal; }
+          .main .m-container .m-content .content-institutions .institutions-hot .hot-cards {
+            padding: 1rem; }
+            .main .m-container .m-content .content-institutions .institutions-hot .hot-cards .card {
+              width: 100%;
+              margin: .5rem 0;
+              /* card 文本区域 */ }
+              .main .m-container .m-content .content-institutions .institutions-hot .hot-cards .card:after, .main .m-container .m-content .content-institutions .institutions-hot .hot-cards .card:before {
+                content: '';
+                display: table; }
+              .main .m-container .m-content .content-institutions .institutions-hot .hot-cards .card:after {
+                clear: both; }
+              .main .m-container .m-content .content-institutions .institutions-hot .hot-cards .card .card-image {
+                margin-right: 1rem;
+                width: 20%;
+                height: 100%;
+                float: left;
+                overflow: hidden; }
+                .main .m-container .m-content .content-institutions .institutions-hot .hot-cards .card .card-image img {
+                  width: 100%;
+                  height: 100%; }
+              .main .m-container .m-content .content-institutions .institutions-hot .hot-cards .card .card-content {
+                float: left;
+                width: calc(79% - 1rem);
+                /* 标题 */
+                /* 人数 */ }
+                .main .m-container .m-content .content-institutions .institutions-hot .hot-cards .card .card-content .title {
+                  width: 100%;
+                  font-size: 1.4rem;
+                  text-overflow: ellipsis;
+                  overflow: hidden;
+                  white-space: nowrap;
+                  color: #333333; }
+                .main .m-container .m-content .content-institutions .institutions-hot .hot-cards .card .card-content .population {
+                  width: 100%;
+                  margin: 1rem 0; }
+                  .main .m-container .m-content .content-institutions .institutions-hot .hot-cards .card .card-content .population span {
+                    color: #666666;
+                    font-size: 1.2rem; }
+                    .main .m-container .m-content .content-institutions .institutions-hot .hot-cards .card .card-content .population span i {
+                      display: inline-block;
+                      width: 10px;
+                      height: 10px;
+                      margin-right: .2rem;
+                      background-position: -286px 0; }
+
+/* footer */
+footer {
+  padding: 5rem;
+  background-color: #2b3439;
+  /* 左边about栏 */
+  /* 右边链接栏 */ }
+  footer:after, footer:before {
+    content: '';
+    display: table; }
+  footer:after {
+    clear: both; }
+  footer .f-about {
+    float: left; }
+    footer .f-about .logo {
+      width: 235px;
+      height: 20px;
+      background-position: 0 -219px; }
+    footer .f-about .info {
+      margin-top: 2rem;
+      color: #8f8e8c;
+      font-size: 1.2rem; }
+  footer .f-cite {
+    float: right; }
+    footer .f-cite .cite-item {
+      display: inline-block;
+      vertical-align: top;
+      width: calc(33.33% - 2rem); }
+      footer .f-cite .cite-item h4 {
+        margin-top: 0;
+        font-weight: normal;
+        font-size: 1.4rem;
+        color: #8f8e8c; }
+      footer .f-cite .cite-item a, footer .f-cite .cite-item .main .m-container .m-content .content-synopsis .paging li button, .main .m-container .m-content .content-synopsis .paging li footer .f-cite .cite-item button {
+        display: inline-block;
+        width: 100%;
+        color: #8f8e8c;
+        font-size: 1.6rem;
+        text-decoration: none;
+        margin-top: 1rem; }
+        footer .f-cite .cite-item a:hover, footer .f-cite .cite-item .main .m-container .m-content .content-synopsis .paging li button:hover, .main .m-container .m-content .content-synopsis .paging li footer .f-cite .cite-item button:hover {
+          text-decoration: underline; }
+        footer .f-cite .cite-item a i, footer .f-cite .cite-item .main .m-container .m-content .content-synopsis .paging li button i, .main .m-container .m-content .content-synopsis .paging li footer .f-cite .cite-item button i {
+          margin-left: .5rem;
+          display: inline-block;
+          width: 21px;
+          height: 17px;
+          background-position: -88px -53px; }
+
+/* 交互相关的 */
+.h-tips {
+  width: 100%;
+  background-color: #f3f3f3;
+  padding: 1rem 0;
+  font-size: 1.4rem; }
+  .h-tips .tips-container {
+    width: 90%;
+    margin: 0 auto; }
+    .h-tips .tips-container a, .h-tips .tips-container .main .m-container .m-content .content-synopsis .paging li button, .main .m-container .m-content .content-synopsis .paging li .h-tips .tips-container button {
+      color: #00a22d;
+      text-decoration: none; }
+      .h-tips .tips-container a:hover, .h-tips .tips-container .main .m-container .m-content .content-synopsis .paging li button:hover, .main .m-container .m-content .content-synopsis .paging li .h-tips .tips-container button:hover {
+        text-decoration: underline; }
+    .h-tips .tips-container:after, .h-tips .tips-container:before {
+      content: '';
+      display: table; }
+    .h-tips .tips-container:after {
+      clear: both; }
+    .h-tips .tips-container .tips-text {
+      float: left; }
+    .h-tips .tips-container .tips-button {
+      float: right; }
+      .h-tips .tips-container .tips-button a, .h-tips .tips-container .tips-button .main .m-container .m-content .content-synopsis .paging li button, .main .m-container .m-content .content-synopsis .paging li .h-tips .tips-container .tips-button button {
+        color: black; }
+
+.shade {
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.6); }
+
+.login-panel, .video-panel {
+  display: none;
+  width: calc(100%/2 - 5rem);
+  height: calc(100%/2);
+  background-color: white;
+  position: fixed;
+  z-index: 1000;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+  .login-panel .login-top, .video-panel .login-top, .video-panel .video-top {
+    background-color: #74B96E;
+    width: 100%;
+    text-align: right; }
+    .login-panel .login-top .login-close, .video-panel .login-top .login-close, .video-panel .video-top .login-close, .video-panel .video-top .video-close {
+      font-size: 1.6rem;
+      display: inline-block;
+      padding: .7rem;
+      cursor: pointer;
+      color: black; }
+      .login-panel .login-top .login-close:hover, .video-panel .login-top .login-close:hover, .video-panel .video-top .login-close:hover, .video-panel .video-top .video-close:hover {
+        color: #00a22d; }
+  .login-panel .login-content, .video-panel .login-content {
+    padding: 2rem 5rem; }
+    .login-panel .login-content .form-panel, .video-panel .login-content .form-panel {
+      width: 60%; }
+      .login-panel .login-content .form-panel input, .video-panel .login-content .form-panel input {
+        box-sizing: border-box;
+        display: block;
+        width: 100%;
+        margin-top: 2rem;
+        padding: 1rem; }
+        .login-panel .login-content .form-panel input:nth-of-type(1), .video-panel .login-content .form-panel input:nth-of-type(1) {
+          margin-top: 0; }
+        .login-panel .login-content .form-panel input.login-button, .video-panel .login-content .form-panel input.login-button {
+          background-color: #74B96E;
+          border: none;
+          color: white;
+          user-select: none; }
+          .login-panel .login-content .form-panel input.login-button:focus, .video-panel .login-content .form-panel input.login-button:focus {
+            outline: none; }
+          .login-panel .login-content .form-panel input.login-button:active, .video-panel .login-content .form-panel input.login-button:active {
+            color: #00a22d; }
+
+.video-panel {
+  width: calc(100% - 8rem); }
+
+.h-coursel {
+  z-index: 899;
+  width: 100%;
+  height: 460px;
+  overflow: hidden;
+  position: relative; }
+  .h-coursel .coursel-content {
+    position: absolute;
+    left: 0;
+    height: 100%;
+    transition: left .5s; }
+    .h-coursel .coursel-content .item {
+      float: left;
+      height: 100%;
+      overflow: hidden; }
+      .h-coursel .coursel-content .item img {
+        width: 100%;
+        height: 100%; }
+  .h-coursel .current {
+    width: 200px;
+    height: 40px;
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
+    text-align: center;
+    line-height: 40px; }
+    .h-coursel .current span {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      border-radius: 50%;
+      margin: 0 .3rem;
+      background-color: white; }
+      .h-coursel .current span.on {
+        background-color: black; }
