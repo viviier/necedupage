@@ -1,7 +1,16 @@
-终于写完了zz。gulp, sass。
-说一下问题，
-*  代码冗余，重复代码过多
-* 没有用好设计模式，设计模式基础不太牢固，还需要多学习
-* 定义了过多的全局变量（为了调用定时）
+#### 技术栈
+
+> * js
+> * sass
+> * gulp
+
+#### 简介
+使用原生js，gulp，sass构建的单页页面。
+主要完成功能：
+* 轮播
+* ajax
+* 分页
+* 登录验证
+* 本地存储判断
 
 [demo](http://htmlpreview.github.io/?https://github.com/viviier/necedupage/blob/master/dist/index.html)
